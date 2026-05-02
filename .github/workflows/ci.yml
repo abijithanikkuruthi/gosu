@@ -14,7 +14,7 @@ defaults:
 jobs:
 
   test:
-
+    if: github.repository == 'tianon/gosu'
     strategy:
       matrix:
         go:
