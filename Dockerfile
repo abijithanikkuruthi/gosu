@@ -19,7 +19,7 @@ RUN set -eux; \
 	FAKEGIT_GO_SEMVER='v1.2.3' git --fake
 
 # note: we cannot add "-s" here because then "govulncheck" does not work (see SECURITY.md); the ~0.2MiB increase (as of 2022-12-16, Go 1.18) is worth it
-ENV BUILD_FLAGS="-v -trimpath -ldflags '-d -w' -buildvcs=true"
+ENV BUILD_FLAGS="-v -trimpath -ldflags '-d -w' -buildvcs=false"
 
 # disable CGO for ALL THE THINGS (to help ensure no libc)
 ENV CGO_ENABLED 0
